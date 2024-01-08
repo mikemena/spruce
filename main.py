@@ -27,6 +27,7 @@ def serial_number_finder():
 beginning = time.time()
 serial_numbers = serial_number_finder()
 count = Counter(serial_numbers)
+total_count = sum(count.values())
 ending = time.time()
 # print(serial_numbers)
 
@@ -35,6 +36,6 @@ formatted_date = today_date.strftime("%m/%d/%Y")
 
 print("-" * 30)
 print("Search date: ", formatted_date)
-print("Numbers found: ", count)
-print("Search duration: ", ending - beginning)
+print("Numbers found: ", total_count)
+print("Search duration: ", ending - beginning, "seconds")
 print("-" * 30)
